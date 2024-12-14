@@ -1,12 +1,28 @@
 package com.learning.dsa_backend_app.response;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ContentResponse {
 
-	private List<String> folders;
-	private List<String> files;
-	private String fileContent;
+	private List<String> folders = new ArrayList<>();
+	private List<String> files = new ArrayList<>();
+	private String fileContent = "";
+
+	public ContentResponse() {
+		super();
+	}
+
+	public ContentResponse(List<String> folders, List<String> files) {
+		super();
+		this.folders = folders;
+		this.files = files;
+	}
+
+	public ContentResponse(String fileContent) {
+		super();
+		this.fileContent = fileContent;
+	}
 
 	public List<String> getFolders() {
 		return folders;

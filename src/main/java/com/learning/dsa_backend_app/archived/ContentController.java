@@ -1,4 +1,4 @@
-package com.learning.dsa_backend_app.controller;
+package com.learning.dsa_backend_app.archived;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,20 +8,19 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.learning.dsa_backend_app.response.ContentResponse;
-import com.learning.dsa_backend_app.service.S3ContentService;
 
-@RestController
-public class S3ContentController {
+//@RestController
+public class ContentController {
 
 	@Autowired
-	S3ContentService s3ContentService;
+	ContentProviderService contentProviderService;
 
 	Logger logger = LoggerFactory.getLogger(getClass());
 
 	@GetMapping("/fetch/content")
-	ContentResponse getContent(@RequestParam String path) {
+	ContentResponse getFolderContent(@RequestParam String path) {
 		logger.info("Request Path is: {}", path);
-		ContentResponse content = s3ContentService.getContent(path);
+		ContentResponse content = contentProviderService.getContent(path);
 		return content;
 	}
 
