@@ -24,7 +24,7 @@ public class DsaBackendAppApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedMethods("*").allowedOrigins("*");
+				registry.addMapping("/**").allowedMethods("*").allowedOrigins("http://dsa-codes.s3-website.ap-south-1.amazonaws.com/");
 			}
 		};
 	}

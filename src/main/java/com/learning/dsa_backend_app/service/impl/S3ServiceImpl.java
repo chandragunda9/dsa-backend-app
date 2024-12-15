@@ -38,7 +38,7 @@ public class S3ServiceImpl implements S3Service {
 	String className = getClass().getSimpleName();
 
 	@Override
-	@Cacheable(cacheNames = "dsaCodesFolderContentCache", key = "#codesFolderFullPath")
+	@Cacheable(cacheNames = "folderContentCache", key = "#codesFolderFullPath")
 	public List<S3ObjectDTO> getS3CodesFolderContent(String codesFolderFullPath) {
 
 		logger.info("Entered {}: getS3CodesFolderContent method", className);
@@ -94,7 +94,7 @@ public class S3ServiceImpl implements S3Service {
 	}
 
 	@Override
-	@Cacheable(cacheNames = "dsaFileContentCache", key = "#fileFullPath")
+	@Cacheable(cacheNames = "fileContentCache", key = "#fileFullPath")
 	public String getS3FileContent(String fileFullPath) {
 		
 		logger.info("Entered {}: getS3FileContent method", className);

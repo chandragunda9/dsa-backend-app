@@ -9,7 +9,7 @@
     	<jsr107:defaults enable-statistics="true"/>
   </service> -->    
 
-    <cache alias="dsaCodesFolderContentCache">
+    <cache alias="folderContentCache">
         <key-type>java.lang.String</key-type>
         <value-type>java.util.List</value-type>
         <expiry>
@@ -36,7 +36,7 @@
     </cache>
     
     
-    <cache alias="dsaFileContentCache">
+    <cache alias="fileContentCache">
         <key-type>java.lang.String</key-type>
         <value-type>java.lang.String</value-type>
         <expiry>

@@ -51,8 +51,6 @@ public class ContentServiceImpl implements ContentService {
 		// initializing codes folder content
 		initCodesFolderData();
 
-		logger.info("dsaCodesFolderData {}", dsaCodesFolderData);
-
 		// storing all paths
 		List<String> keys = dsaCodesFolderData.stream().map(dto -> dto.getKey()).toList();
 		logger.info("keys: {}", keys);
